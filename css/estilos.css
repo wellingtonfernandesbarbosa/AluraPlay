@@ -63,8 +63,14 @@ body {
     height: 100vh;
 }
 
+.falha__envio {
+    display: flex;
+    flex-direction: column;
+}
+
 .mensagem__imagem {
     width: 30%;
+    align-self: center;
 }
 
 .mensagem__titulo {

@@ -13,11 +13,15 @@ async function buscaVideo(evento) {
     while (lista.firstChild) {
         lista.removeChild(lista.firstChild);
     };
-    
+
     busca.forEach(elemento => lista.appendChild(
         constroiCard(elemento.titulo, elemento.descricao, elemento.url, elemento.imagem)
         )
     );
+
+    if (busca.length == 0) {
+        lista.innerHTML = `<h2 class="mensagem__titulo">Desculpe, não encontramos nenhum vídeo com o termo especificado. Tente novamente com uma palavra-chave diferente ou verifique se há erros de digitação.</h2>`;
+    }
 }
 
 const botaoDePesquisa = document.querySelector("[data-botao-pesquisa]");

@@ -46,3 +46,8 @@
     border-radius: 24px;
     background-color: var(--azul-escuro);
 }
+
+.formulario__botao__erro {
+    width: fit-content;
+    align-self: center;
+}
